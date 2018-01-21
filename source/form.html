@@ -37,7 +37,7 @@
       <h1 class="visually-hidden">Подбор программы питания "Cat energy"</h1>
 
       <section class="select">
-        <h2>Подбор программы</h2>
+        <h1>Подбор программы</h1>
         <p class="select__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
         <form action="https://echo.htmlacademy.ru" method="post">
           <fieldset>
@@ -62,7 +62,7 @@
             <label for="user-email">E-mail:
               <sup>*</sup>
             </label>
-            <input id="user-email" type="text" name="email" placeholder="kuklachev@gmail.com" required>
+            <input id="user-email" type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="kuklachev@gmail.com" required>
             <label for="user-phone">Телефон:
               <sup>*</sup>
             </label>
@@ -100,7 +100,7 @@
           </div>
         </div>
         <div class="footer__social social">
-          <a class="social__logo">
+          <a class="social__logo" href="index.html">
             <img class="social__logo-name" src="img/footer-logo.svg" width="128" height="24" alt="Cat energy">
           </a>
           <ul class="social__list">
