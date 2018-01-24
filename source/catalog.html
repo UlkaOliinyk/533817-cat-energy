@@ -4,36 +4,38 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <link href="css/style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600,700&amp;subset=cyrillic" rel="stylesheet">
 </head>
 
 <body>
 
-  <header class="page-header">
-    <a href="index.html" class="page-header__logo">
-      <img class="page-header__logo-image" src="img/logo-mobile.svg" width="33" height="38" alt="Кэт энерджи">
-      <img class="page-header__logo-name" src="img/logo-mobile-name.svg" width="101" height="18" alt="Cat energy">
-    </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item">
-            <a href="index.html">Главная</a>
-          </li>
-          <li class="site-list__item site-list__item--active">
-            <a>Каталог продукции</a>
-          </li>
-          <li class="site-list__item">
-            <a href="form.html">Подбор программы</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+  <header class="header b-block">
+    <div class="header__wrapper">
+      <a class="header__logo">
+        <img class="header__logo-image" src="img/icon-logo-mobile.svg" width="33" height="38" alt="Кэт энерджи">
+        <img class="header__logo-name" src="img/logo-mobile-header.svg" width="101" height="18" alt="Cat energy">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item">
+              <a href="index.html">Главная</a>
+            </li>
+            <li class="site-list__item site-list__item--active">
+              <a>Каталог продукции</a>
+            </li>
+            <li class="site-list__item">
+              <a href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
   </header>
 
 
-  <main class="page-main">
+  <main class="main b-block">
     <section class="catalog">
       <h1>Каталог продукции</h1>
       <ul class="catalog__list">
@@ -288,21 +290,24 @@
         <p class="action__text">Закажите все и получите чехол для кота в подарок!</p>
       </div>
     </section>
-  </main>
 
-  <footer class="footer">
-    <div class="footer__contacts">
-      <div class="footer__contacts contacts">
+
+    <section class="contacts">
+      <div class="contacts__block">
         <p class="contacts__title">Приглашаем к сотрудничеству дилеров!</p>
         <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
       </div>
-      <div class="footer__contacts map">
-        <img class="footer__contacts-image" src="img/map.png" width="320" height="400">
+      <div class="contacts__map">
+        <img class="contacts__image" src="img/map.png" width="320" height="400">
       </div>
-    </div>
+    </section>
+  </main>
+
+
+  <footer class="footer b-block">
     <div class="footer__logo">
       <a href="index.html">
-        <img class="footer__logo-name" src="img/footer-logo.svg" width="128" height="24" alt="Cat energy">
+        <img class="footer__logo-name" src="img/logo-footer.svg" width="128" height="24" alt="Cat energy">
       </a>
     </div>
     <div class="footer__social social">
@@ -320,6 +325,7 @@
     </div>
     <div class="footer__copyright copyright">
       <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+    </div>
     </div>
   </footer>
 </body>
