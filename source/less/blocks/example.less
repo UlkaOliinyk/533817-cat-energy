@@ -5,6 +5,15 @@
   margin: 0 auto;
   border: 1px solid red;
 
+  .example__wrapper {
+    margin: 0 20px;
+  }
+
+  .example__title {
+    font-size: @font-size--h1;
+    font-weight: 400;
+  }
+
   .example__text {
     font-family: @font-family-text;
     color: @text-color-grey;
@@ -31,5 +40,34 @@
     font-size: 14px;
     line-height: 20px;
     text-transform: uppercase;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .example {
+    background-color: rgb(177, 213, 230); //временно для разметки
+    width: 768px;
+    min-height: 1080px; //временно для разметки
+    margin: 0 auto;
+
+    .example__wrapper {
+      margin: 0 30px;
+    }
+
+    .example__title {
+      font-size: @font-size--t-d-h1;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example {
+    width: 1440px;
+    min-height: 130px; //временно для разметки
+    margin: 0 auto;
+
+    .example__wrapper {
+      margin: 0 70px;
+    }
   }
 }

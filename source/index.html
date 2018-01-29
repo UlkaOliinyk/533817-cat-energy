@@ -37,11 +37,15 @@
 
   <main class="main">
     <section class="first-screen">
-      <h1>Функциональное питание для котов</h1>
+      <div class="first-screen__header">
+      <h1 class="first-screen__title">Функциональное питание для котов</h1>
       <p class="first-screen__slogan">Занялся собой? Займись котом!</p>
+    </div>
+    <div class="first-screen__bottom">
       <img class="first-screen__image" src="img/index-can-mobile@1x.png" width="280" height="271" alt="Пример продукции">
       <a class="first-screen__button button-green" href="form.html">Подобрать программу</a>
-    </section>
+    </div>
+  </section>
 
     <section class="categories">
       <h1 class="visually-hidden">Наши программы питания</h1>
@@ -81,35 +85,37 @@
     </section>
 
     <section class="example">
-      <h1 class="example__title">Живой пример</h1>
-      <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих
-        тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-      <table class="example__list">
-        <tr>
-          <td class="example__value">5 кг</td>
-          <td class="example__field">снижение веса</td>
-        </tr>
-        <tr>
-          <td class="example__value">60 дней</td>
-          <td class="example__field">затрачено времени</td>
-        </tr>
-      </table>
-      <p class="example__total">Затраты на питание: 15 000 руб.</p>
-      <div class="btn-switch">
-        <input type="radio" id="before" name="switch" class="btn-switch__radio" checked/>
-        <label for="before" class="btn-switch__label"></label>
-        <span class="btn-switch__txt">Было</span>
-        <input type="radio" id="after" name="switch" class="btn-switch__radio" />
-        <label for="after" class="btn-switch__label"></label>
-        <span class="btn-switch__txt">Стало</span>
+      <div class="example__wrapper">
+        <h1 class="example__title">Живой пример</h1>
+        <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих
+          тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+        <table class="example__list">
+          <tr>
+            <td class="example__value">5 кг</td>
+            <td class="example__field">снижение веса</td>
+          </tr>
+          <tr>
+            <td class="example__value">60 дней</td>
+            <td class="example__field">затрачено времени</td>
+          </tr>
+        </table>
+        <p class="example__total">Затраты на питание: 15 000 руб.</p>
+        <div class="btn-switch">
+          <input type="radio" id="before" name="switch" class="btn-switch__radio" checked/>
+          <label for="before" class="btn-switch__label"></label>
+          <span class="btn-switch__txt">Было</span>
+          <input type="radio" id="after" name="switch" class="btn-switch__radio" />
+          <label for="after" class="btn-switch__label"></label>
+          <span class="btn-switch__txt">Стало</span>
+        </div>
       </div>
     </section>
 
 
     <section class="contacts">
       <div class="contacts__block">
-        <p class="contacts__title">Приглашаем к сотрудничеству дилеров!</p>
-        <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <div class="contacts__title">Приглашаем к сотрудничеству дилеров!</div>
+        <div class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</div>
       </div>
       <div class="contacts__map">
         <img class="contacts__image" src="img/map.png" width="320" height="400">
