@@ -1,12 +1,11 @@
 .example {
-  width: 320px;
-  background-color: @color-background;
+  width: 100%;
+  height: 700px; //временно для разметки
   color: @text-color;
-  margin: 0 auto;
-  border: 1px solid red;
+  .wrapper;
 
   .example__wrapper {
-    margin: 0 20px;
+    background-color: @color-background;
   }
 
   .example__title {
@@ -45,14 +44,9 @@
 
 @media (min-width: @tablet-width) {
   .example {
-    background-color: rgb(177, 213, 230); //временно для разметки
-    width: 768px;
+    width: 100%;
     min-height: 1080px; //временно для разметки
-    margin: 0 auto;
-
-    .example__wrapper {
-      margin: 0 30px;
-    }
+    .wrapper;
 
     .example__title {
       font-size: @font-size--t-d-h1;
@@ -62,12 +56,9 @@
 
 @media (min-width: @desktop-width) {
   .example {
-    width: 1440px;
     min-height: 130px; //временно для разметки
-    margin: 0 auto;
-
-    .example__wrapper {
-      margin: 0 70px;
-    }
+    width: 100%;
+    .wrapper;
   }
 }
+

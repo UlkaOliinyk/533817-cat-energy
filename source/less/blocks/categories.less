@@ -1,11 +1,10 @@
 .categories {
-  width: 320px;
-  margin: 0 auto;
-  border: 1px solid rgb(7, 6, 100);
-  background-color: rgb(167, 222, 238);//временно для разметки
+  width: 100%;
+  .wrapper;
 
   .categories__list {
     padding: 0;
+    margin: 0;
   }
 
   .categories__item {
@@ -13,7 +12,6 @@
     background-color: @color-background;
     list-style: none;
     height: 265px;
-    margin: 20px;
   }
 
   h2 {
@@ -42,12 +40,9 @@
 
 @media (min-width: @tablet-width) {
   .categories {
-    width: 768px;
     min-height: 770px; //временно для разметки
-
-    .categories__item {
-      margin: 30px;
-    }
+    width: 100%;
+    .wrapper;
 
     h2 {
       font-size: @font-size--h1;
@@ -57,13 +52,13 @@
 
 @media (min-width: @desktop-width) {
   .categories {
-    width: 1440px;
     min-height: 430px; //временно для разметки
+    width: 100%;
+    .wrapper;
 
     .categories__list {
       display: flex;
       width: 1300px;
-      margin: 0 70px;
     }
 
     .categories__item {
