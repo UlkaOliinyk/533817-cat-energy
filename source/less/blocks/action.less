@@ -1,8 +1,88 @@
 .action {
   width: 100%;
   .wrapper;
-
   .action__wrapper {
-    color: @text-color;
+    color: #ffffff;
+    background-color: @color-main;
+    background-image: url("../img/gift-photo-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    width: 280px;
+    height: 290px;
+    margin: 20px auto;
+  }
+  svg {
+    fill: #ffffff;
+    height: 70px;
+    width: 70px;
+    margin-top: 50px;
+    margin-left: calc(50% - 15px);
+    margin-bottom: 50px;
+  }
+  .action__text {
+    font-family: @font-family-text;
+    text-align: center;
+    width: 180px;
+    margin: 10px auto 20px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .action {
+    width: 100%;
+    .wrapper;
+    .action__wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      width: 708px;
+      height: 200px;
+      background-size: cover;
+      top: calc(-50%);
+    }
+    svg {
+      margin-top: 50px;
+      margin-left: 0;
+    }
+    .action__text {
+      margin: 20px;
+      text-align: left;
+      margin-left: 120px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .action {
+      width: 400px;
+      margin: 0;
+      padding: 0;
+      padding-top: 95px;
+
+      .action__wrapper {
+        display: block;
+        width: 250px;
+        height: 290px;
+        margin: 0;
+      }
+
+      svg {
+        margin-top: 50px;
+        margin-left: calc(50% - 30px);
+        margin-bottom: 50px;
+      }
+
+      .action__text {
+        font-family: @font-family-text;
+        text-align: center;
+        width: 180px;
+        margin: 10px -35px 20px;
+      }
+    }
   }
 }

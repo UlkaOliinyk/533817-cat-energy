@@ -30,10 +30,12 @@
     padding: 0;
   }
 
-  .catalog__item article {
+  .catalog__article {
     width: 100%;
+    height: 210px;
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 20px;
   }
 
   .catalog__img {
@@ -45,7 +47,7 @@
     text-align: left;
   }
 
-  .catalog__title-more,
+  .catalog__title--more,
   .catalog__title a {
     display: block;
     font-size: 16px;
@@ -56,20 +58,37 @@
     width: 120px;
   }
 
-  .catalog__title-more {
+  .catalog__title--more {
+    position: relative;
     width: 280px;
+    padding-top: 80px;
     margin: 20px auto 10px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      height: 3px;
+      width: 30px;
+      background-color: #dfdfdf;
+      top: 25px;
+      left: calc(50% - 5px);
+    }
+
+    &::after {
+      transform: rotate(-90deg);
+    }
   }
 
   .catalog__description,
-  .catalog__description-more {
+  .catalog__description--more {
     font-family: @font-family-text;
     font-size: 12px;
     text-align: 16px;
     width: 140px;
   }
 
-  .catalog__description-more {
+  .catalog__description--more {
     width: 280px;
     margin: 0 auto;
   }
@@ -113,17 +132,21 @@
       border: 0;
     }
 
-    article {
+    .catalog__article {
       width: 100%;
+      height: 440px;
       display: flex;
       flex-direction: column;
       align-items: right;
-      background-image: linear-gradient(#ffffff 15%, #f2f2f2 15%);
+      background-color: #f2f2f2;
+      margin-top: 110px;
     }
 
     .catalog__last-article {
-      background-image: none;
+      height: 440px;
+      background-color: none;
       border: 2px solid #f7f7f7;
+      margin-top: 110px;
     }
 
     .catalog__img {
@@ -131,28 +154,57 @@
     }
 
     .catalog__img img {
-      opacity: 0.5;  //временно для разметки
+      opacity: 0.5;               //временно для разметки
+      border: 2px solid #ec9614;//временно для разметки
+      width: 160px;               //временно для разметки
+      height: 200px;              //временно для разметки
+      margin-top: -50px;
     }
 
     .catalog__column {
       width: 100%;
     }
 
-    .catalog__title a {
+    .catalog__title a,
+    .catalog__title--more {
       display: block;
-      width: 180px;
+      width: 160px;
+      font-size: 20px;
+      font-weight: 500;
       line-height: 24px;
       text-align: center;
       margin: 0 auto;
     }
 
-    .catalog__description {
+    .catalog__title--more {
+      width: 180px;
+      padding-top: 150px;
+      margin: 20px auto 30px;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 60px;
+        top: 60px;
+        left: calc(50% - 15px);
+      }
+    }
+
+    .catalog__description,
+    .catalog__description--more {
       width: 250px;
       font-size: 16px;
       color: #444444;
       text-align: 16px;
       border-collapse: collapse;
       margin: 0 auto;
+    }
+
+    .catalog__description--more {
+      width: 200px;
+      margin-bottom: 50px;
     }
 
     .catalog__description tr {
@@ -197,17 +249,19 @@
       border: 0;
     }
 
+    .catalog__article,
+    .catalog__last-article {
+      margin-top: 110px;
+    }
+
     .catalog__description {
       width: 180px;
-      font-size: 16px;
-      text-align: 16px;
-      border-collapse: collapse;
       margin: 0 auto;
     }
 
     .catalog__button {
       width: 180px;
-      margin: 30px auto 40px;
+      margin: 30px auto;
     }
   }
 }
