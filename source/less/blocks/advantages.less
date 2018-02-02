@@ -1,11 +1,17 @@
 .advantages {
-  width: 320px;
-  margin: 0 auto;
-  border: 1px solid red;
+  width: 100%;
+  height: 450px; //временно для разметки
+  .wrapper;
 
-  h1 {
+  .advantages__wrapper {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .advantages__title {
     font-family: @font-family;
     font-size: @font-size--h1;
+    line-height: 36px;
     font-weight: 400;
   }
 
@@ -15,9 +21,50 @@
   }
 
   .advantages__text {
-    font-family: @font-family;
+    font-family: @font-family-text;
     color: @text-color-grey;
     font-size: 14px;
     line-height: 18px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .advantages {
+    min-height: 770px; //временно для разметки
+    width: 100%;
+    .wrapper;
+
+    .advantages__title {
+      font-size: @font-size--t-d-h1;
+    }
+
+    .advantages__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .advantages__item {
+      border: 1px solid rgb(0, 17, 255); //временно для разметки
+      width: 320px;
+      height: 320px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages {
+    min-height: 420px; //временно для разметки
+    width: 100%;
+    .wrapper;
+
+    .advantages__list {
+      display: flex;
+    }
+
+    .advantages__item {
+      width: 250px;
+      height: 250px;
+    }
   }
 }

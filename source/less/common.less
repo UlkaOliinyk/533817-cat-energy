@@ -1,3 +1,13 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   min-width: 320px;
   margin: 0;
@@ -28,6 +38,20 @@ img {
   padding-top: 11px;
   padding-bottom: 11px;
   background-color: @color-main;
+  width: 280px;
+  text-decoration: none;
+}
+
+.button-white {
+  display: inline-block;
+  color: #000000;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  background-color: @color-background;
   width: 280px;
   text-decoration: none;
 }

@@ -1,7 +1,19 @@
-header {
-  .header__wrapper {
-    width: 320px;
+.header {
+  width: 100%;
+  max-height: 265px; //временно для разметки
+  .wrapper;
+}
+
+@media (min-width: @tablet-width) {
+  .header {
+    min-height: 100px; //временно для разметки
     margin: 0 auto;
-    border: 1px solid red;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .header {
+    min-height: 130px; //временно для разметки
+    margin: 0 auto;
   }
 }
