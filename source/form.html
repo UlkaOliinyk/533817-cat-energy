@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -39,62 +40,100 @@
 
     <section class="select">
       <div class="select__wrapper">
-      <h1>Подбор программы</h1>
+      <h1 class="select__title-big">Подбор программы</h1>
       <p class="select__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
       <form action="https://echo.htmlacademy.ru" method="post">
-        <fieldset>
-          <label for="user-name">Имя:
-            <sup>*</sup>
-          </label>
-          <input id="user-name" type="text" name="name" placeholder="Барсик" required>
-          <label for="user-weight">Вес (кг):
-            <sup>*</sup>
-          </label>
-          <input id="user-weight" type="text" name="weight" placeholder="7" required>
-          <label for="user-age">Возраст (лет):</label>
-          <input id="user-age" type="text" name="age" placeholder="7">
-          <label for="programm">
-            <input id="programm" type="radio" name="select-programm" value="slim" checked> Похудение
-            <input id="programm" type="radio" name="select-programm" value="pro"> Набор массы
-            <input id="programm" type="radio" name="select-programm" value="advice"> Не знаю (нужен ваш совет)
-          </label>
-        </fieldset>
-        <fieldset>
+        <fieldset class="select__first">
+            <ul>
+              <li>
+                <label for="user-name">Имя:
+                  <sup>*</sup>
+                </label>
+                <input class="user" id="user-name" type="text" name="name" placeholder="Барсик" required>
+              </li>
+              <li>
+                <label for="user-weight">Вес (кг):
+                  <sup>*</sup>
+                </label>
+                <input class="user" id="user-weight" type="text" name="weight" placeholder="7" required>
+              </li>
+              <li>
+                <label for="user-age">Возраст (лет):</label>
+                <input class="user" id="user-age" type="text" name="age" placeholder="7">
+              </li>
+            </ul>
+</fieldset>
+<fieldset class="select__programm">
+            <ul>
+              <li>
+                <input class="select__radio" id="slim" type="radio" name="select-programm" value="slim" checked>
+                <label for="slim">Похудение</label>
+                </li>
+              <li>
+                <input class="select__radio" id="pro" type="radio" name="select-programm" value="pro">
+              <label for="pro">Набор массы</label>
+              </li>
+              <li>
+                <input class="select__radio" id="advice" type="radio" name="select-programm" value="advice">
+              <label for="advice">Не знаю (нужен ваш совет)</label>
+              </li>
+            </ul>
+          </fieldset>
+        <fieldset class="select__other">
           <legend>
-            <h2>Контактные данные (владельца кота)</h2>
+            <h2 class="select__title">Контактные данные (владельца кота)</h2>
           </legend>
-          <label for="user-email">E-mail:
-            <sup>*</sup>
-          </label>
-          <input id="user-email" type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="kuklachev@gmail.com"
-            required>
-          <label for="user-phone">Телефон:
-            <sup>*</sup>
-          </label>
-          <input id="user-phone" type="tel" name="phone" pattern="[0-9]{1}\s([0-9]{3})\s[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="8 (960) 900-60-90"
-            required>
+          <ul>
+            <li>
+              <label for="user-email">E-mail:
+                <sup>*</sup>
+              </label>
+              <input class="user" id="user-email" type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="kuklachev@gmail.com"
+                required>
+            </li>
+            <li>
+              <label for="user-phone">Телефон:
+                <sup>*</sup>
+              </label>
+              <input class="user" id="user-phone" type="tel" name="phone" pattern="[0-9]{1}\s([0-9]{3})\s[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="8 (960) 900-60-90"
+                required>
+            </li>
+          </ul>
         </fieldset>
-        <fieldset>
+        <fieldset class="select__other">
           <legend>
-            <h2>Комментарий</h2>
+            <h2 class="select__title">Комментарий</h2>
           </legend>
-          <label for="user-comment"></label>
           <textarea id="user-comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
-        <fieldset>
+        <fieldset class="select__last">
           <legend>
-            <h2>>Дополнительно</h2>
+            <h2 class="select__title">Дополнительно</h2>
           </legend>
-          <input type="checkbox" checked>Сахарозаменитель
-          <input type="checkbox">Питьевая вода
-          <input type="checkbox">Молоко
-          <input type="checkbox">Витамины
+          <ul>
+            <li>
+              <input class="select__checkbox" type="checkbox" name="sugar" id="sugar" checked>
+              <label for="sugar">Сахарозаменитель</label>
+            </li>
+            <li>
+              <input class="select__checkbox" type="checkbox" name="water" id="water">
+              <label for="water">Питьевая вода</label>
+            </li>
+            <li>
+              <input class="select__checkbox" type="checkbox" name="milk" id="milk">
+              <label for="milk">Молоко</label>
+            </li>
+            <li>
+              <input class="select__checkbox" type="checkbox" name="vitamins" id="vitamins">
+              <label for="vitamins">Витамины</label>
+            </li>
+          </ul>
         </fieldset>
-        <input type="submit" class="button-green" value="Отправить заявку">
-        <small class="select__legend">
-          <sup>*</sup> — Обязательные поля
-        </small>
       </form>
+      <input type="submit" class="button-green" value="Отправить заявку">
+      <small class="select__legend">
+        <sup>*</sup> — Обязательные поля
+      </small>
       </div>
     </section>
 
