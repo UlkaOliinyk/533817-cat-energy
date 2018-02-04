@@ -8,25 +8,67 @@
   }
 
   .categories__item {
+    display: flex;
+    flex-direction: column;
     min-width: 280px;
     background-color: @color-background;
     list-style: none;
     height: 265px;
+    margin-top: 20px;
   }
 
   h2 {
+    position: relative;
     font-family: @font-family;
     font-size: @font-size--h2;
     font-weight: 400;
     text-transform: uppercase;
     line-height: 36px;
+    padding: 10px 30px;
+    margin-left: 60px;
+    margin-bottom: 0;
+  }
+
+  h2::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -40px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: @color-main;
+  }
+
+  .categories__slim h2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 50px;
+    height: 50px;
+    background-image: url("../img/icon-cat-slim.svg");
+    background-size: 50px 50px;
+  }
+
+  .categories__pro h2::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -45px;
+    width: 65px;
+    height: 50px;
+    background-image: url("../img/icon-cat-pro.svg");
+    background-size: 65px 50px;
   }
 
   .categories__description {
     font-family: @font-family-text;
     color: @text-color-grey;
+    display: block;
     font-size: 14px;
     line-height: 18px;
+    padding: 5px 20px;
   }
 
   .categories__button {
@@ -35,17 +77,78 @@
     text-decoration: none;
     font-size: 16px;
     line-height: 16px;
+    border-top: 1px solid  @color-grey-line;
+    padding: 20px;
   }
 }
 
 @media (min-width: @tablet-width) {
   .categories {
-    min-height: 770px; //временно для разметки
     width: 100%;
     .wrapper;
 
+    .categories__item {
+      height: 370px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
     h2 {
       font-size: @font-size--h1;
+      padding: 45px 30px 10px 30px;
+      margin-left: 20px;
+      margin-bottom: 0;
+    }
+  
+    h2::before {
+      content: "";
+      position: absolute;
+      top: 60px;
+      left: 425px;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: @color-main;
+    }
+  
+    .categories__slim h2::after {
+      content: "";
+      position: absolute;
+      top: 47px;
+      left: 425px;
+      width: 200px;
+      height: 200px;
+      background-image: url("../img/icon-cat-slim.svg");
+      background-size: 200px 200px;
+    }
+  
+    .categories__pro h2::after {
+      content: "";
+      position: absolute;
+      top: 58px;
+      left: 390px;
+      width: 267px;
+      height: 200px;
+      background-image: url("../img/icon-cat-pro.svg");
+      background-size: 267px 200px;
+    }
+  
+    .categories__description {
+      font-size: 16px;
+      line-height: 24px;
+      width: 380px;
+      padding: 0 20px;
+      margin-left: 30px;
+    }
+  
+    .categories__button {
+      color: @text-color;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-size: 20px;
+      line-height: 20px;
+      border-top: none;
+      padding: 35px 50px;
     }
   }
 }
