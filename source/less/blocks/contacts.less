@@ -10,7 +10,7 @@
   .contacts__block {
     display: flex;
     justify-content: space-between;
-    padding: 30px;
+    padding: 10px 20px;
   }
 
   .contacts__title {
@@ -38,9 +38,12 @@
 
 @media (min-width: @tablet-width) {
   .contacts {
-    min-height: 100px; //временно для разметки
     width: 100%;
     .wrapper;
+
+    .contacts__block {
+      padding: 50px 70px;
+    }
 
     .contacts__title {
       width: 180px;
@@ -59,7 +62,6 @@
 
 @media (min-width: @desktop-width) {
   .contacts {
-    height: 400px; //временно для разметки
     width: 100%;
     .wrapper;
 
