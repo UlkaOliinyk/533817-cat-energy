@@ -45,42 +45,42 @@
         <form action="https://echo.htmlacademy.ru" method="post">
           <div class="select__desktop-block">
             <fieldset class="select__first">
-            <ul>
-              <li>
-                <label for="user-name">Имя:
-                  <sup>*</sup>
-                </label>
-                <input class="user" id="user-name" type="text" name="name" placeholder="Барсик" required>
-              </li>
-              <li>
-                <label for="user-weight">Вес (кг):
-                  <sup>*</sup>
-                </label>
-                <input class="user" id="user-weight" type="text" name="weight" placeholder="7" required>
-              </li>
-              <li>
-                <label for="user-age">Возраст (лет):</label>
-                <input class="user" id="user-age" type="text" name="age" placeholder="7">
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="select__programm">
-            <ul>
-              <li>
-                <input class="select__radio" id="slim" type="radio" name="select-programm" value="slim" checked>
-                <label for="slim">Похудение</label>
-              </li>
-              <li>
-                <input class="select__radio" id="pro" type="radio" name="select-programm" value="pro">
-                <label for="pro">Набор массы</label>
-              </li>
-              <li>
-                <input class="select__radio" id="advice" type="radio" name="select-programm" value="advice">
-                <label for="advice">Не знаю (нужен ваш совет)</label>
-              </li>
-            </ul>
-          </fieldset>
-        </div>
+              <ul>
+                <li>
+                  <label for="user-name">Имя:
+                    <sup>*</sup>
+                  </label>
+                  <input class="user" id="user-name" type="text" name="name" placeholder="Барсик" required>
+                </li>
+                <li>
+                  <label for="user-weight">Вес (кг):
+                    <sup>*</sup>
+                  </label>
+                  <input class="user" id="user-weight" type="text" name="weight" placeholder="7" required>
+                </li>
+                <li>
+                  <label for="user-age">Возраст (лет):</label>
+                  <input class="user" id="user-age" type="text" name="age" placeholder="7">
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="select__programm">
+              <ul>
+                <li>
+                  <input class="select__radio" id="slim" type="radio" name="select-programm" value="slim" checked>
+                  <label for="slim">Похудение</label>
+                </li>
+                <li>
+                  <input class="select__radio" id="pro" type="radio" name="select-programm" value="pro">
+                  <label for="pro">Набор массы</label>
+                </li>
+                <li>
+                  <input class="select__radio" id="advice" type="radio" name="select-programm" value="advice">
+                  <label for="advice">Не знаю (нужен ваш совет)</label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
           <fieldset class="select__other">
             <legend>
               <h2 class="select__title">Контактные данные (владельца кота)</h2>
@@ -133,11 +133,12 @@
           </fieldset>
         </form>
         <div class="select__button-block">
-        <input type="submit" class="select__button button-green" value="Отправить заявку">
-        <small class="select__legend">
-          <p><sup>*</sup> — Обязательные поля</p>
-        </small>
-      </div>
+          <input type="submit" class="select__button button-green" value="Отправить заявку">
+          <small class="select__legend">
+            <p>
+              <sup>*</sup> — Обязательные поля</p>
+          </small>
+        </div>
       </div>
     </section>
 
@@ -228,5 +229,4 @@
     </div>
   </footer>
 </body>
-
 </html>
