@@ -5,12 +5,12 @@
   font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
+  //min-height: 60px;
   width: 320px;
-  min-height: 51px;
   margin-left: -20px;
 
 
-  .main-nav__toggle {
+  .main-nav__toggle {     //белая кнопка переключатель
     position: absolute;
     top: -65px;
     right: 0;
@@ -18,17 +18,17 @@
     display: block;
     width: 70px;
     height: 65px;
-    background-color: #42df1a;
+    background-color: #ffffff;
     cursor: pointer;
     border: none;
 
     &:hover,
     &:active {
-      background-color: #e4680f;
+      background-color: rgba(253, 253, 253, 0.8);
     }
   }
 
-  &.main-nav--closed {
+  &.main-nav--closed {     //кнопка-меню - "гамбургер"
     .main-nav__toggle {
       &::before {
         content: "";
@@ -37,21 +37,46 @@
         left: 17px;
         width: 36px;
         height: 3px;
-        background-color: #ffffff;
-        box-shadow: 0 8px 0 0 #ffffff, 0 16px 0 0 #ffffff;
+        background-color: #000000;
+        box-shadow: 0 9px 0 0 #000000, 0 18px 0 0 #000000;
       }
     }
   }
 
-  .main-nav--closed .main-nav__toggle:active::before {
-    background-color: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 8px 0 0 rgba(219, 105, 105, 0.3), 0 16px 0 0 rgba(255, 255, 255, 0.3);
+  &.main-nav--closed .main-nav__toggle:active::before {
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
-  a {
-    text-decoration: none;
-    color: @text-color;
-    font-weight: 500;
+  &.main-nav--opened {  //кнопка-меню - крестик
+    .main-nav__toggle {
+      top: -65px;
+      right: 0;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 30px;
+        left: 18px;
+        width: 36px;
+        height: 2px;
+        background-color: #000000;
+      }
+
+      &::before {
+        transform: rotate(45deg);
+        box-shadow: none;
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+      }
+
+      &:active::before,
+      &:active::after {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+    }
   }
 
   .main-nav__list {
@@ -60,7 +85,23 @@
   }
 }
 
-@media (min-width: @tablet-width) {
-  .main-nav__list {
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .site-list {
+    display: none;
   }
+
+  .main-nav--opened .site-list {
+    display: block;
+  }
+
+
+  // .main-nav--nojs .main-nav__toggle {
+  //   display: none;
+  // }
 }
+
+
+// @media (min-width: @tablet-width) {
+//   .main-nav__list {
+//   }
+// }

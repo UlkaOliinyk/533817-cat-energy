@@ -1,7 +1,6 @@
 .example {
   background-color: @color-background;
   width: 100%;
-  height: 700px; //временно для разметки
   .wrapper;
 
   .example__wrapper {
@@ -11,6 +10,7 @@
   .example__title {
     font-size: @font-size--h1;
     font-weight: 400;
+    margin: 25px 0 30px;
   }
 
   .example__text {
@@ -20,11 +20,36 @@
     line-height: 18px;
   }
 
-  .example__value {
+  .example__list tbody {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 280px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .example__list tr {
+    width: 125px;
+    height: 55px;
+    border: 1px solid #cfcfcf;
+    border-radius: 3px;
+  }
+
+  .example__list td {
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin: 10px auto;
+  }
+
+  .example__list .example__value {
     font-family: @font-family;
     font-size: @font-size--h2;
     line-height: 20px;
     text-transform: uppercase;
+    width: 90px;
+    padding-top: 5px;
   }
 
   .example__field {
@@ -32,6 +57,8 @@
     color: @text-color-grey;
     font-size: 12px;
     line-height: 12px;
+    background-color: @color-background;
+    width: 80px;
   }
 
   .example__total {
@@ -39,25 +66,129 @@
     font-size: 14px;
     line-height: 20px;
     text-transform: uppercase;
+    text-align: center;
+    margin-top: 25px;
   }
 }
 
 @media (min-width: @tablet-width) {
   .example {
     width: 100%;
-    min-height: 1080px; //временно для разметки
     .wrapper;
+    background-image: linear-gradient(to bottom, #ffffff 57%, @color-background 57%);
 
     .example__title {
       font-size: @font-size--t-d-h1;
+    }
+
+    .example__text {
+      font-family: @font-family-text;
+      color: @text-color-grey;
+      font-size: 16px;
+      line-height: 24px;
+      padding: 30px 0;
+    }
+
+    .example__container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .example__list tbody {
+      width: 365px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .example__list tr {
+      width: 160px;
+      height: 70px;
+      border: 1px solid #cfcfcf;
+      border-radius: 3px;
+    }
+
+    .example__list td {
+      display: block;
+      text-align: center;
+      padding: 0;
+      margin: 10px auto;
+    }
+
+    .example__list .example__value {
+      font-family: @font-family;
+      font-size: 30px;
+      line-height: 37px;
+      width: 120px;
+      padding-top: 5px;
+    }
+
+    .example__field {
+      font-size: 14px;
+      line-height: 14px;
+      background-color: #ffffff;
+      width: 140px;
+    }
+
+    .example__total {
+      font-family: @font-family;
+      font-size: 20px;
+      line-height: 26px;
+      text-transform: uppercase;
+      width: 180px;
+      text-align: right;
+      margin-top: 20px;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
   .example {
-    min-height: 130px; //временно для разметки
     width: 100%;
     .wrapper;
+    background-image: linear-gradient(to bottom, #ffffff 30%, @color-background 30%);
+
+    .example__wrapper {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .example__left-container,
+    .example__btn-switch {
+      width: 650px;
+    }
+
+    .example__title {
+      margin: 50px 40px;
+    }
+
+    .example__text {
+      width: 500px;
+      padding: 90px 40px 0 0;
+    }
+
+    .example__container {
+      display: block;
+      padding: 40px;
+    }
+
+    .example__list tbody {
+      margin-bottom: 40px;
+    }
+
+    .example__field {
+      background-color: @color-background;
+    }
+
+    .example__total {
+      display: block;
+      width: 330px;
+      text-align: right;
+      margin: 0;
+      margin-top: 20px;
+    }
+
+    .example__total span {
+      padding: 0 0 0 60px;
+    }
   }
 }
