@@ -12,8 +12,8 @@
   .footer__logo {
     text-align: center;
     width: 280px;
-    height: 90px;
-    padding-top: 40px;
+    height: 80px;
+    padding-top: 20px;
   }
 
   .footer__social {
@@ -43,7 +43,7 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      height: 150px; //временно для разметки
+      height: 150px;
       background-color: @color-background;
     }
 
@@ -52,13 +52,14 @@
       width: 200px;
       height: 30px;
       padding: 0;
+      margin-top: 20px;
     }
 
     .footer__social {
       width: 250px;
       height: 30px;
       border: none;
-      margin-top: -40px;
+      margin-top: -30px;
     }
 
     .footer__copyright {
@@ -67,6 +68,7 @@
       height: 30px;
       padding: 0;
       margin: 0;
+      margin-top: 25px;
     }
   }
 }
@@ -76,8 +78,13 @@
     width: 100%;
     .wrapper;
 
+    .footer__logo {
+      margin-top: 0;
+    }
+
     .footer__social {
       text-align: center;
+      margin-top: -40px;
     }
 
     .footer__copyright {
