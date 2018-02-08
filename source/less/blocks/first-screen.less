@@ -31,6 +31,8 @@
   }
 
   .first-screen__image {
+    width: 280px;
+    height: 271px;
     margin-top: -210px;
   }
 }
@@ -83,15 +85,15 @@
     }
 
     .first-screen__image {
-      display: none;
+      width: 709px;
+      height: 609px;
+      margin-top: -230px;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
   .first-screen {
-    margin: 0 auto;
-
     .first-screen__wrapper {
       position: relative;
       z-index: -1;
@@ -104,15 +106,17 @@
       position: absolute;
       top: 0;
       right: 0;
-      width: 700px;
-      height: 697px;
-      background-image: url("../img/index-background-mobile@1x.jpg");
+      z-index: 1;
+      width: 607px;
+      height: 710px;
+      background-image: url("../img/index-background-desktop@1x.jpg");
       background-size: cover;
     }
 
     .first-screen__header {
       margin: 220px 30px 0 30px;
       text-align: left;
+      padding-left: 50px;
     }
 
     .first-screen__title {
@@ -120,12 +124,22 @@
     }
 
     .first-screen__bottom {
+      z-index: 5;
       padding-bottom: 45px;
     }
 
     .first-screen__button {
       top: -195px;
-      left: 120px;
+      left: 80px;
+    }
+
+    .first-screen__image {
+      width: 552px;
+      height: 520px;
+      z-index: 5;
+      padding-bottom: 50px;
+      margin-right: -230px;
+      margin-top: -520px;
     }
   }
 }

@@ -16,8 +16,10 @@
         <img class="header__logo-image" src="img/icon-logo-mobile.svg" width="33" height="38" alt="Кэт энерджи">
         <img class="header__logo-name" src="img/logo-mobile-header.svg" width="101" height="18" alt="Cat energy">
       </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
@@ -32,6 +34,7 @@
           </ul>
         </div>
       </nav>
+    </div>
   </header>
 
 
@@ -150,7 +153,7 @@
           <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </div>
         <div class="contacts__map">
-          <img class="contacts__image" src="img/map.png" width="320" height="400">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.598942417719!2d30.320889251048666!3d59.93879686895971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sua!4v1517958201444" width="1300" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
       </div>
     </section>
@@ -223,8 +226,9 @@
         </ul>
       </div>
       <div class="footer__copyright copyright">
-        <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-      </div>
+          <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <img class="copyright__img" src="img/htmlacademy.svg" width="42" height="35" alt="Логотип HTML Academy">
+        </div>
     </div>
     </div>
   </footer>

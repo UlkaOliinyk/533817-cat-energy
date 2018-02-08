@@ -151,14 +151,15 @@
 
     .catalog__img {
       width: 100%;
+      margin-bottom: 15px;
     }
 
-    .catalog__img img {
-      opacity: 0.5;               //временно для разметки
-      border: 2px solid #ec9614;//временно для разметки
-      width: 160px;               //временно для разметки
-      height: 200px;              //временно для разметки
-      margin-top: -50px;
+    .catalog__img--small {
+      margin-top: -40px;
+    }
+
+    .catalog__img--big {
+      margin-top: -75px;
     }
 
     .catalog__column {
@@ -229,12 +230,9 @@
     width: 100%;
     .wrapper;
 
-    .catalog__wrapper {
-      padding: 0 70px;
-    }
-
     .catalog__title-big {
       font-size: @font-size--t-d-h1;
+      padding: 50px 40px;
     }
 
     .catalog__list {
@@ -243,15 +241,15 @@
     }
 
     .catalog__item {
-      width: 255px;
+      width: 240px;
       padding: 0;
-      margin: 30px;
+      margin: 0 40px;
       border: 0;
     }
 
     .catalog__article,
     .catalog__last-article {
-      margin-top: 110px;
+      margin-top: 90px;
     }
 
     .catalog__description {
