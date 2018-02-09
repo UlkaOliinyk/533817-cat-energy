@@ -12,6 +12,13 @@
     margin: 20px auto;
   }
 
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    .action__wrapper {
+      background-image: url("../img/gift-photo-mobile@2x.jpg");
+      background-size: 280px 290px;
+    }
+  }
+
   svg {
     fill: #ffffff;
     height: 70px;
@@ -40,10 +47,17 @@
       flex-direction: row;
       align-items: center;
       justify-content: space-around;
+      background-image: url("../img/gift-photo-tablet@1x.jpg");
       width: 708px;
       height: 200px;
-      background-size: cover;
       top: calc(-50%);
+    }
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      .action__wrapper {
+        background-image: url("../img/gift-photo-tablet@2x.jpg");
+        background-size: 708px 200px;
+      }
     }
 
     svg {
@@ -73,9 +87,17 @@
 
       .action__wrapper {
         display: block;
-        width: 250px;
+        background-image: url("../img/gift-photo-desktop@1x.jpg");
+        width: 245px;
         height: 290px;
         margin: 0 0 10px 0;
+      }
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        .action__wrapper {
+          background-image: url("../img/gift-photo-desktop@2x.jpg");
+          background-size: 245px 290px;
+        }
       }
 
       svg {
