@@ -32,9 +32,18 @@
 
   .contacts__map iframe {
     width: 320px;
-    height: 360px;
+    height: 362px;
+    background-color: #eaedec;
+    background-image: url("../img/bg-map-mobile@1x.png");
     border: 0;
     padding: 0;
+  }
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    .action__wrapper {
+      background-image: url("../img/bg-map-mobile@2x.png");
+      background-size: 320px 362px;
+    }
   }
 }
 
@@ -64,8 +73,17 @@
     .contacts__map iframe {
       width: 767px;
       height: 400px;
+      background-color: #eaedec;
+      background-image: url("../img/bg-map-tablet@1x.png");
       border: 0;
       padding: 0;
+    }
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      .action__wrapper {
+        background-image: url("../img/bg-map-tablet@2x.png");
+        background-size: 767px 400px;
+      }
     }
   }
 }
@@ -104,8 +122,17 @@
     .contacts__map iframe {
       width: 1300px;
       height: 400px;
+      background-color: #eaedec;
+      background-image: url("../img/bg-map-desktop@1x.png");
       border: 0;
       padding: 0;
+    }
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      .action__wrapper {
+        background-image: url("../img/bg-map-desktop@2x.png");
+        background-size: 1300px 400px;
+      }
     }
   }
 }

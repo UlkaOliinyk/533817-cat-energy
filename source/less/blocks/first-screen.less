@@ -10,6 +10,13 @@
     padding-top: 5px;
   }
 
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    .first-screen__wrapper {
+      background-image: url("../img/index-background-mobile@2x.jpg");
+      background-size: 320px 305px;
+    }
+  }
+
   .first-screen__header {
     text-align: center;
     padding-bottom: 230px;
@@ -101,18 +108,27 @@
       z-index: -1;
       margin-top: -130px;
       background-image: linear-gradient(to right, #ffffff 53%, @color-main 53%);
+      margin-bottom: 35px;
     }
 
     .first-screen__wrapper::before {
       content: "";
       position: absolute;
-      top: -220px;
+      top: 0;
       right: 0;
       z-index: 1;
       width: 607px;
-      height: 710px;
+      height: 696px;
       background-image: url("../img/index-background-desktop@1x.jpg");
       background-size: cover;
+    }
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      .first-screen__wrapper::before {
+        content: "";
+        background-image: url("../img/index-background-desktop@2x.jpg");
+        background-size: 680px 696px;
+      }
     }
 
     .first-screen__header {
@@ -127,7 +143,7 @@
 
     .first-screen__bottom {
       z-index: 5;
-      padding-bottom: 45px;
+      padding-bottom: 25px;
     }
 
     .first-screen__button {
