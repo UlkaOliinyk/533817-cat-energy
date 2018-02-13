@@ -87,12 +87,19 @@
 @media (max-width: @mobile-width-only) {
   .main-nav--closed .site-list {
     display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  .main-nav--closed:active .site-list {
+    display: block;
   }
 
   .main-nav--opened .site-list {
     display: block;
   }
-
 
   // .main-nav--nojs .main-nav__toggle {
   //   display: none;
