@@ -7,18 +7,29 @@
     display: flex;
     flex-direction: column;
     color: @text-color;
+    height: 235px;
+    padding: 20px;
   }
 
   .footer__logo {
     text-align: center;
     width: 280px;
-    height: 90px;
-    padding-top: 40px;
+    height: 65px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .footer__logo:hover {
+    opacity: 0.8;
+  }
+
+  .footer__logo:active {
+    opacity: 0.5;
   }
 
   .footer__social {
     width: 280px;
-    height: 70px;
+    height: 65px;
     border-top: 1px solid #807e7e;
     border-bottom: 1px solid #807e7e;
   }
@@ -28,22 +39,30 @@
     color: @text-color;
     text-align: left;
     width: 280px;
-    height: 60px;
-    padding-top: 30px;
-    padding-bottom: 40px;
+    height: 65px;
+    padding-top: 10px;
+  }
+
+  .footer__copyright:hover {
+    opacity: 0.8;
+  }
+
+  .footer__copyright:active {
+    opacity: 0.5;
   }
 }
 
 @media (min-width: @tablet-width) {
   .footer {
     width: 100%;
+    padding-top: 30px;
     .wrapper;
 
     .footer__wrapper {
       flex-direction: row;
       justify-content: space-between;
-      align-items: center;
-      height: 150px; //временно для разметки
+      align-items: baseline;
+      height: 150px;
       background-color: @color-background;
     }
 
@@ -51,22 +70,19 @@
       text-align: left;
       width: 200px;
       height: 30px;
-      padding: 0;
+      margin-left: 10px;
     }
 
     .footer__social {
       width: 250px;
       height: 30px;
       border: none;
-      margin-top: -40px;
     }
 
     .footer__copyright {
       text-align: right;
       width: 200px;
       height: 30px;
-      padding: 0;
-      margin: 0 30px;
     }
   }
 }
@@ -74,25 +90,26 @@
 @media (min-width: @desktop-width) {
   .footer {
     width: 100%;
+    padding-top: 40px;
     .wrapper;
 
+    .footer__wrapper {
+      padding: 0 35px;
+      height: 100px;
+    }
+
     .footer__logo {
-      text-align: left;
-      padding: 0 40px;
-      margin: 0 10px;
+      margin-top: 0;
     }
 
     .footer__social {
       text-align: center;
-      padding: 0;
       margin-top: -40px;
-      margin-left: 70px;
     }
 
     .footer__copyright {
       text-align: right;
-      padding: 0 40px;
-      margin: 0 50px;
+      width: 200px;
     }
   }
 }

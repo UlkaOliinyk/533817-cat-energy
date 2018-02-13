@@ -1,6 +1,5 @@
 .contacts {
   width: 100%;
-  background-color: @color-background;
   .wrapper;
 
   .contacts__wrapper {
@@ -10,7 +9,7 @@
   .contacts__block {
     display: flex;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 27px 20px;
   }
 
   .contacts__title {
@@ -31,8 +30,20 @@
     width: 160px;
   }
 
-  .contacts__map {
+  .contacts__map iframe {
+    width: 320px;
+    height: 362px;
+    background-color: #eaedec;
+    background-image: url("../img/bg-map-mobile@1x.png");
+    border: 0;
     padding: 0;
+  }
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    .action__wrapper {
+      background-image: url("../img/bg-map-mobile@2x.png");
+      background-size: 320px 362px;
+    }
   }
 }
 
@@ -40,9 +51,10 @@
   .contacts {
     width: 100%;
     .wrapper;
+    background-color: @color-background;
 
     .contacts__block {
-      padding: 50px 70px;
+      padding: 70px 70px 50px;
     }
 
     .contacts__title {
@@ -56,6 +68,22 @@
       width: 180px;
       font-size: 16px;
       line-height: 20px;
+    }
+
+    .contacts__map iframe {
+      width: 767px;
+      height: 400px;
+      background-color: #eaedec;
+      background-image: url("../img/bg-map-tablet@1x.png");
+      border: 0;
+      padding: 0;
+    }
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      .action__wrapper {
+        background-image: url("../img/bg-map-tablet@2x.png");
+        background-size: 767px 400px;
+      }
     }
   }
 }
@@ -75,9 +103,9 @@
       background-color: #ffffff;
       width: 570px;
       height: 200px;
-      padding: 60px;
-      top: 90px;
-      left: 110px;
+      padding: 70px;
+      top: 95px;
+      left: 40px;
     }
 
     .contacts__title {
@@ -89,6 +117,22 @@
       width: 170px;
       text-align: left;
       margin: 0;
+    }
+
+    .contacts__map iframe {
+      width: 1300px;
+      height: 400px;
+      background-color: #eaedec;
+      background-image: url("../img/bg-map-desktop@1x.png");
+      border: 0;
+      padding: 0;
+    }
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      .action__wrapper {
+        background-image: url("../img/bg-map-desktop@2x.png");
+        background-size: 1300px 400px;
+      }
     }
   }
 }

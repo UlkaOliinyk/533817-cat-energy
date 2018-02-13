@@ -68,10 +68,11 @@
     display: block;
     font-size: 14px;
     line-height: 18px;
-    padding: 5px 20px;
+    padding: 8px 20px;
   }
 
   .categories__button {
+    position: relative;
     color: @text-color;
     text-transform: uppercase;
     text-decoration: none;
@@ -79,6 +80,40 @@
     line-height: 16px;
     border-top: 1px solid  @color-grey-line;
     padding: 20px;
+  }
+
+  .categories__button::before {   //основание стреллочки
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 3px;
+    margin-top: 10px;
+    margin-left: 125px;
+    background: #000000;
+  }
+
+  .categories__button::after {  //конец стрелочки
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 160px;
+    border: 6px solid #ffffff;
+    border-right-width: 0;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: #000000;
+  }
+
+  .categories__button:hover::before {
+    width: 25px;
+  }
+
+  .categories__button:hover::after {
+    left: 170px;
+  }
+
+  .categories__button:active {
+    opacity: 0.5;
   }
 }
 
@@ -89,7 +124,7 @@
 
     .categories__item {
       height: 370px;
-      margin-top: 30px;
+      margin-top: 0;
       margin-bottom: 30px;
     }
 
@@ -148,7 +183,16 @@
       font-size: 20px;
       line-height: 20px;
       border-top: none;
-      padding: 35px 50px;
+      padding: 40px 50px;
+    }
+
+    .categories__button::after {  //конец стрелочки
+      top: 45px;
+      left: 190px;
+    }
+
+    .categories__button:hover::after {
+      left: 200px;
     }
   }
 }
@@ -156,18 +200,18 @@
 @media (min-width: @desktop-width) {
   .categories {
     width: 100%;
-    margin-top: -90px;
+    margin-top: 20px;
     .wrapper;
 
     .categories__list {
       display: flex;
-      width: 1300px;
+      justify-content: space-between;
     }
 
     .categories__item {
       width: 570px;
       height: 370px;
-      margin: 40px;
+      margin: 40px 0;
     }
 
     .categories__title {
@@ -187,7 +231,7 @@
       background-color: @color-main;
     }
 
-    .categories__slim .categories__title::after {
+    .categories__slim .categories__title::after {//конец стрелочки
       content: "";
       position: absolute;
       top: 10px;
@@ -219,6 +263,10 @@
 
     .categories__button {
       padding: 15px 50px;
+    }
+
+    .categories__button::after {    //конец стрелочки
+      top: 20px;
     }
   }
 }

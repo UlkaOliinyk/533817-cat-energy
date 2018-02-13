@@ -72,10 +72,36 @@
     width: 100%;
   }
 
+  .user:hover {
+    border: 1px solid #bababa;
+  }
+
+  .user:focus,
+  .user:active {
+    border: 2px solid #2e2e2e;
+  }
+
+  // .user:invalid {
+  //   border: 1px solid #ff8282;
+  // }
+
   input::placeholder {
     color: @text-color;
     font-family: @font-family;
     text-transform: uppercase;
+  }
+
+  .select__other svg {
+    margin-top: 17px;
+    margin-left: -40px;
+  }
+
+  .select__other svg:active {
+    fill: #68b738;
+  }
+
+  .select__other svg:invalid {
+    fill: #ff8282;
   }
 
   .select__programm {
@@ -126,7 +152,6 @@
     height: 30px;
     border: 1px solid @color-grey-line;
     background-color: #ffffff;
-    //box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     border-radius: 50%;
   }
 
@@ -149,6 +174,10 @@
     background-color: @color-main;
   }
 
+  .select__radio + label:hover::before {
+    border: 1px solid #bababa;
+  }
+
   .select__other textarea {
     box-sizing: border-box;
     font-family: @font-family;
@@ -160,7 +189,11 @@
     border: 1px solid @color-grey-line;
   }
 
-  .select__checkbox + label::before {
+  .select__other textarea:hover {
+    border: 1px solid #bababa;
+  }
+
+  .select__checkbox + label::before { //сурый кубик для чекбокса
     content: "";
     position: absolute;
     left: 1px;
@@ -183,10 +216,20 @@
     transform: rotate(45deg);
   }
 
-  .select__checkbox:checked + label::after {
+  .select__checkbox:checked + label::after {//зеленая галочка в чекбоксе
     border: solid @color-main;
     border-width: 0 2px 2px 0;
   }
+
+  .select__checkbox + label:hover::before {
+    border: 1px solid #bababa;
+  }
+
+  .select__programm li:disabled,
+  .select__last li:disabled {
+    opacity: 0.4;
+  }
+
 
   .select__button {
     color: #ffffff;
@@ -349,11 +392,11 @@
 
     .select__wrapper {
       font-size: 20px;
-      padding: 0 70px;
+      padding: 0;
     }
 
     .select__title-big {
-      margin: 0 40px;
+      margin: 50px 40px;
     }
 
     .select__description {
@@ -375,6 +418,16 @@
     .select__programm {
       width: 50%;
       margin: 13px 40px 40px 40px;
+    }
+
+    .select__title {
+      padding: 25px 25px;
+      margin: 0;
+    }
+
+    .select__other textarea {
+      width: 1220px;
+      margin: 45px 25px;
     }
 
     .select__other ul {
