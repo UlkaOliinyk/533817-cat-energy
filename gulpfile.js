@@ -45,8 +45,7 @@ gulp.task("style", function() {
     .pipe(minify())
     .pipe(rename("style.min.css"))
     .pipe(gulp.dest("build/css"));
-
-    // .pipe(server.stream());
+    //.pipe(server.stream());
 });
 
 
@@ -94,13 +93,9 @@ gulp.task("build", function (done) {
 
  gulp.task("serve", function() {
   server.init({
-    server: "build/",
-    notify: false,
-    open: true,
-    cors: true,
-    ui: false
+    server: "build/"
   });
 
   gulp.watch("source/less/**/*.less", ["style"]);
-  gulp.watch("source/*.html", ["html"]);
+  gulp.watch("source/*.html", ["html"]).on("change", server.reload);
 });
