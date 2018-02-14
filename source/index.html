@@ -121,22 +121,24 @@
           </div>
         </div>
         <div class="example__btn-switch btn-switch">
-          <input type="radio" id="before" name="switch" class="btn-switch__radio1" checked/>
-          <input type="radio" id="after" name="switch" class="btn-switch__radio2" />
+          <input type="radio" id="before" name="switch" class="btn-switch__radio1">
+          <input type="radio" id="middle" name="switch" class="btn-switch__radio3" checked/>
+          <input type="radio" id="after" name="switch" class="btn-switch__radio2">
           <div class="btn-switch__picture">
+              <picture class="btn-switch__after">
+                  <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                  <img class="btn-switch__img btn-switch__img--after" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Фото упитанного кота">
+                </picture>
             <picture class="btn-switch__before">
-              <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+              <source media="(min-width: 1300px)" class="btn-switch__img btn-switch__img--before" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" class="btn-switch__img btn-switch__img--before" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
               <img class="btn-switch__img btn-switch__img--before" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x"
                 alt="Фото упитанного кота">
             </picture>
-            <picture class="btn-switch__after">
-              <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
-              <img class="btn-switch__img btn-switch__img--after" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Фото упитанного кота">
-            </picture>
           </div>
           <label for="before" class="btn-switch__label"></label>
+          <label for="middle" class="btn-switch__label"></label>
           <label for="after" class="btn-switch__label"></label>
           <div class="btn-switch__discription">
             <span class="btn-switch__txt">Было</span>

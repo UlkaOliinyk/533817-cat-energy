@@ -96,6 +96,6 @@ gulp.task("build", function (done) {
     server: "build/"
   });
 
-  gulp.watch("source/less/**/*.less", ["style"]);
+  gulp.watch("source/less/**/*.less", ["style"]).on("change", server.reload);
   gulp.watch("source/*.html", ["html"]).on("change", server.reload);
 });
