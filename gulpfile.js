@@ -17,6 +17,11 @@ var del = require("del");
 var run = require("run-sequence");
 
 
+gulp.task("clean", function () {
+ return del("build");
+});
+
+
 gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
@@ -27,11 +32,6 @@ gulp.task("copy", function () {
   })
    .pipe(gulp.dest("build"));
  });
-
-
-gulp.task("clean", function () {
- return del("build");
-});
 
 
 gulp.task("style", function() {
