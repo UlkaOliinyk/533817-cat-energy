@@ -12,25 +12,34 @@
     font-size: @font-size--h1;
     text-transform: none;
     font-weight: 400;
-    margin: 0 20px;
+    margin: 25px 20px;
   }
 
   .select__description {
-    margin: 20px;
+    font-size: 14px;
+    line-height: 18px;
+    margin: 35px 30px 10px 20px;
   }
 
   .select__first {
     border: none;
     padding: 0;
-    margin: 0 20px;
+    margin: 15px 20px 0;
   }
 
   .select__other,
   .select__last {
     border: none;
     border-top: 3px solid @color-main;
-    padding-bottom: 0;
     margin: 0;
+  }
+
+  .select__other {
+    padding-bottom: 5px;
+  }
+
+  .select__last {
+    padding: 0 5px;
   }
 
   .select__title {
@@ -39,9 +48,15 @@
     font-weight: 400;
     text-transform: none;
     background-color: #ffffff;
+    width: 240px;
     padding-right: 20px;
-    padding-left: 20px;
+    padding-left: 30px;
     margin-left: -20px;
+  }
+
+  .select__last .select__title {
+    width: 200px;
+    margin: 10px 10px 30px -10px;
   }
 
   ul {
@@ -57,18 +72,21 @@
   .select__other li {
     display: flex;
     justify-content: space-between;
-    padding: 10px;
-    padding-left: 0;
+    padding: 7px 0;
+  }
+
+  .select__other li {
+    padding: 7px;
   }
 
   label {
     flex-shrink: 0;
-    padding: 15px 10px 10px 0;
+    padding: 15px 15px 10px 0;
   }
 
   .user {
     border: 1px solid @color-grey-line;
-    padding: 15px 10px 10px 10px;
+    padding: 15px 10px 10px 15px;
     width: 100%;
   }
 
@@ -92,8 +110,8 @@
   }
 
   .select__other svg {
-    margin-top: 17px;
-    margin-left: -40px;
+    margin-top: 16px;
+    margin-left: -35px;
   }
 
   .select__other svg:active {
@@ -115,9 +133,12 @@
     justify-content: space-around;
   }
 
-  .select__programm li,
+  .select__programm li {
+    padding: 10px 10px 15px 10px;
+  }
+
   .select__last li {
-    padding: 10px 10px 15px 0;
+    padding: 10px 10px 15px 15px;
   }
 
   .select__last ul {
@@ -143,7 +164,7 @@
     padding-left: 45px;
   }
 
-  .select__radio + label::before {
+  .select__radio + label::before {//белый кружок-радио выбор
     content: "";
     position: absolute;
     left: 12px;
@@ -155,7 +176,7 @@
     border-radius: 50%;
   }
 
-  .select__radio + label::after {
+  .select__radio + label::after {//зеленая точка-радио выбор
     content: "";
     position: absolute;
     top: 6px;
@@ -185,7 +206,7 @@
     height: 150px;
     width: 100%;
     padding: 15px;
-    margin-bottom: 10px;
+    margin: 2px 10px 10px;
     border: 1px solid @color-grey-line;
   }
 
@@ -193,7 +214,7 @@
     border: 1px solid #bababa;
   }
 
-  .select__checkbox + label::before { //сурый кубик для чекбокса
+  .select__checkbox + label::before { //серый кубик для чекбокса
     content: "";
     position: absolute;
     left: 1px;
@@ -204,13 +225,13 @@
     background-color: #ffffff;
   }
 
-  .select__checkbox + label::after {
+  .select__checkbox + label::after {//основа для зеленой галочки в чекбоксе
     content: "";
     position: absolute;
     top: -3px;
     left: 12px;
     width: 12px;
-    height: 22px;
+    height: 20px;
     border: solid #ffffff;
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
@@ -235,14 +256,14 @@
     color: #ffffff;
     font-family: @font-family;
     border: none;
-    margin: 10px 20px;
+    margin: 20px 20px 10px;
   }
 
   .select__legend {
     display: block;
     font-family: @font-family-text;
     text-transform: none;
-    margin: 20px 80px;
+    margin: 10px 80px 30px;
   }
 }
 
@@ -258,7 +279,7 @@
 
     .select__title-big {
       font-size: @font-size--t-d-h1;
-      margin: 0;
+      margin: 35px 0;
     }
 
     .select__description {
@@ -280,17 +301,40 @@
       margin-top: 5px;
     }
 
+    .select__first li {
+      padding: 10px 0;
+    }
+
+    .select__other,
+    .select__last {
+      width: 768px;
+      margin-left: -30px;
+      padding-left: 30px;
+    }
+
+    .select__title {
+      font-size: @font-size--h1;
+      padding-left: 40px;
+      margin-left: 0;
+    }
+
     .select__other ul {
-      margin: 25px 10px 20px;
+      margin: 25px 35px 20px 25px;
     }
 
     .select__other li {
-      padding: 10px 15px;
+      padding: 8px 15px;
+    }
+
+    .select__other textarea {
+      height: 175px;
+      width: 650px;
+      margin: 35px 35px;
     }
 
     .user {
       border: 1px solid @color-grey-line;
-      padding: 15px 10px 15px 10px;
+      padding: 15px 10px 15px 20px;
     }
 
     .select__programm li {
@@ -309,7 +353,7 @@
     .select__radio + label::after {
       content: "";
       position: absolute;
-      top: 12px;
+      top: 11px;
       left: 27px;
       width: 15px;
       height: 15px;
@@ -321,21 +365,24 @@
       padding-left: 70px;
     }
 
-    .select__title {
-      font-size: @font-size--h1;
-      padding-left: 40px;
+    .select__other .select__title {
+      width: 580px;
     }
 
-    .select__other textarea {
-      height: 175px;
-      margin: 35px 25px;
+    .select__other .select__title--mod {
+      width: 270px;
+    }
+
+    .select__last .select__title {
+      width: 270px;
+      margin: 15px 0 20px 0;
     }
 
     .select__last ul {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      padding: 10px 0 10px 20px;
+      padding: 35px 40px 10px 40px;
     }
 
     .select__last li {
@@ -352,11 +399,11 @@
       height: 40px;
     }
 
-    .select__checkbox + label::after {
-      top: -3px;
-      left: 17px;
+    .select__checkbox + label::after {//основа для зеленой галочки в чекбоксе
+      top: 2px;
+      left: 15px;
       width: 13px;
-      height: 25px;
+      height: 22px;
     }
 
     .select__checkbox + label {
@@ -420,14 +467,22 @@
       margin: 13px 40px 40px 40px;
     }
 
+    .select__other,
+    .select__last {
+      width: 1300px;
+      margin-left: 0;
+      padding-left: 0;
+      padding-bottom: 10px;
+    }
+
     .select__title {
-      padding: 25px 25px;
+      padding: 25px 0 25px 35px;
       margin: 0;
     }
 
     .select__other textarea {
       width: 1220px;
-      margin: 45px 25px;
+      margin: 45px 25px 20px 35px;
     }
 
     .select__other ul {
@@ -439,7 +494,7 @@
     }
 
     .select__last ul {
-      padding: 10px 0 10px 20px;
+      padding: 5px 10px 10px 40px;
     }
 
     .select__last li {

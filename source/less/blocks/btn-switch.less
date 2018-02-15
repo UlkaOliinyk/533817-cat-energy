@@ -52,7 +52,7 @@
     left: 40px;
   }
 
-  .btn-switch__radio1:checked ~ .btn-switch__picture > .btn-switch__before,
+  .btn-switch__radio3:checked ~ .btn-switch__picture > .btn-switch__before,
   .btn-switch__radio2:checked ~ .btn-switch__picture > .btn-switch__after {
     opacity: 1;
   }
@@ -129,6 +129,40 @@
 
     .btn-switch__radio2:checked ~ .btn-switch__label::after {
       left: 403px;
+    }
+
+    .btn-switch__radio3:checked ~ .btn-switch__label::before {
+      left: 200px;
+    }
+
+    .btn-switch__radio3:checked ~ .btn-switch__label::after {
+      left: 212px;
+    }
+
+    .btn-switch__radio3:checked ~ .btn-switch__picture > .btn-switch__before,  //среднее положение checked
+    .btn-switch__radio3:checked ~ .btn-switch__picture > .btn-switch__after {
+      position: relative;
+      display: block;
+    }
+
+    .btn-switch__img--before {
+      position: absolute;
+      opacity: 1;
+      clip: rect(auto 350px auto auto);
+    }
+
+    .btn-switch__img--after {
+      position: absolute;
+      opacity: 1;
+      clip: rect(auto auto auto 350px);
+    }
+
+    .btn-switch__radio3:checked ~ .btn-switch__picture > .btn-switch__before {
+      opacity: 1;
+    }
+
+    .btn-switch__radio3:checked ~ .btn-switch__picture > .btn-switch__after {
+      opacity: 1;
     }
 
     .btn-switch__discription {
