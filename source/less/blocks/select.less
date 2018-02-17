@@ -97,12 +97,11 @@
 
   .user:focus,
   .user:active {
-    border: 2px solid #2e2e2e;
+    border: 1px solid #2e2e2e;
   }
 
   .user:active:invalid {
     border: 1px solid #ff8282;
-    box-shadow: inset 0 0 0 1px #ff8282;
   }
 
   input::placeholder {
@@ -265,11 +264,11 @@
     display: block;
     font-family: @font-family-text;
     text-transform: none;
-    margin: 10px 80px 30px;
+    margin: 10px 80px 40px;
   }
 }
 
-@media (min-width: @tablet-width) {
+@media (min-width: @tablet-width) {//////////////////////////////////////////////////////////
   .select {
     width: 100%;
     .wrapper;
@@ -312,6 +311,10 @@
       width: 768px;
       margin-left: -30px;
       padding-left: 30px;
+    }
+
+    .select__other--mod {
+      margin-top: 7px;
     }
 
     .select__title {
@@ -377,7 +380,7 @@
 
     .select__last .select__title {
       width: 270px;
-      margin: 15px 0 20px 0;
+      margin: 20px 0 15px 0;
     }
 
     .select__last ul {
@@ -422,13 +425,15 @@
 
     .select__button {
       font-size: 20px;
-      margin: 10px 40px;
+      height: 50px;
+      margin: 15px 40px;
     }
 
     .select__legend {
       display: block;
       width: 300px;
       margin: 10px;
+      margin-top: 30px;
       margin-left: 30px;
     }
   }
@@ -445,7 +450,7 @@
     }
 
     .select__title-big {
-      margin: 50px 40px;
+      margin: 90px 40px 50px;
     }
 
     .select__description {
@@ -466,20 +471,33 @@
 
     .select__programm {
       width: 50%;
-      margin: 13px 40px 40px 40px;
+      margin: 13px 40px 30px 40px;
     }
 
     .select__other,
     .select__last {
       width: 1300px;
+      margin-top: 0;
+      padding-top: 0;
       margin-left: 0;
       padding-left: 0;
       padding-bottom: 10px;
     }
 
     .select__title {
-      padding: 25px 0 25px 35px;
-      margin: 0;
+      margin: 20px 0 20px 0;
+      padding: 10px 0 20px 35px;
+    }
+
+    .select__title--mod {
+      margin: 15px 0 20px 0;
+      padding: 0 0 15px 35px;
+    }
+
+    .select__last .select__title {
+      width: 270px;
+      margin: 25px 0 25px 0;
+      padding: 5px 0 25px 35px;
     }
 
     .select__other textarea {
@@ -489,14 +507,24 @@
 
     .select__other ul {
       display: flex;
+      margin: 25px 0;
     }
 
     .select__other li {
       width: 50%;
+      margin: 0 20px;
+    }
+
+    .user {
+      padding-right: 20px;
+    }
+
+    .select-last {
+      margin-top: 0;
     }
 
     .select__last ul {
-      padding: 5px 10px 10px 40px;
+      padding: 5px 10px 10px 35px;
     }
 
     .select__last li {
@@ -505,15 +533,17 @@
 
     .select__button {
       width: 570px;
+      height: 50px;
     }
 
     .select__legend {
       width: 570px;
+      margin-top: 20px;
       margin-left: 40px;
     }
 
     .select__button-block {
-      margin-bottom: 80px;
+      margin-bottom: 70px;
     }
   }
 }

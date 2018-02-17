@@ -13,7 +13,6 @@
     min-width: 280px;
     background-color: @color-background;
     list-style: none;
-    height: 265px;
     margin-top: 20px;
   }
 
@@ -65,7 +64,7 @@
   .categories__description {
     font-family: @font-family-text;
     color: @text-color-grey;
-    display: block;
+    display: inline-block;
     font-size: 14px;
     line-height: 18px;
     padding: 8px 20px;
@@ -87,16 +86,16 @@
     content: "";
     width: 15px;
     height: 3px;
-    margin-top: 10px;
-    margin-left: 125px;
+    margin-top: 8px;
+    margin-left: 95px;
     background: #000000;
   }
 
   .categories__button::after {  //конец стрелочки
     content: "";
     position: absolute;
-    top: 25px;
-    left: 160px;
+    top: 23px;
+    left: 130px;
     border: 6px solid #ffffff;
     border-right-width: 0;
     border-top-color: transparent;
@@ -186,9 +185,13 @@
       padding: 40px 50px;
     }
 
+    .categories__button::before {
+      left: 85px;
+    }
+
     .categories__button::after {  //конец стрелочки
-      top: 45px;
-      left: 190px;
+      top: 44px;
+      left: 195px;
     }
 
     .categories__button:hover::after {
