@@ -91,9 +91,9 @@ gulp.task("html", function () {
 
 gulp.task("jsminify", function () {
   return gulp.src("source/js/**/*.{js}")
-  .pipe(jsmin())
-  .pipe(gulp.dest("build/js"));
- });
+    .pipe(jsmin())
+    .pipe(gulp.dest("build/js"));
+});
 
 
 gulp.task("build", function (done) {
@@ -105,10 +105,10 @@ gulp.task("build", function (done) {
     "html",
     done
   );
- });
+});
 
 
- gulp.task("serve", function() {
+gulp.task("serve", function() {
   server.init({
     server: "build/"
   });
