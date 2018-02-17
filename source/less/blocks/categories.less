@@ -122,9 +122,10 @@
     .wrapper;
 
     .categories__item {
-      height: 370px;
+      min-height: 370px;
       margin-top: 0;
       margin-bottom: 30px;
+      padding-bottom: 25px;
     }
 
     .categories__title {
@@ -213,7 +214,8 @@
 
     .categories__item {
       width: 570px;
-      height: 370px;
+      min-height: 370px;
+      padding-bottom: 25px;
       margin: 40px 0;
     }
 
@@ -234,7 +236,7 @@
       background-color: @color-main;
     }
 
-    .categories__slim .categories__title::after {//конец стрелочки
+    .categories__slim .categories__title::after {
       content: "";
       position: absolute;
       top: 10px;
@@ -269,7 +271,7 @@
     }
 
     .categories__button::after {    //конец стрелочки
-      top: 20px;
+      top: 19px;
     }
   }
 }
