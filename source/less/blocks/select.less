@@ -24,7 +24,7 @@
   .select__first {
     border: none;
     padding: 0;
-    margin: 15px 20px 0;
+    margin: 15px 20px 5px;
   }
 
   .select__other,
@@ -34,7 +34,9 @@
     margin: 0;
   }
 
-  .select__other {
+  .select__other--first {
+    margin-top: 5px;
+    padding-top: 0;
     padding-bottom: 5px;
   }
 
@@ -45,6 +47,7 @@
   .select__title {
     display: inline-block;
     font-size: @font-size--h2;
+    line-height: 24px;
     font-weight: 400;
     text-transform: none;
     background-color: #ffffff;
@@ -54,9 +57,13 @@
     margin-left: -20px;
   }
 
+  .select__other .select__title {
+    margin-bottom: 26px;
+  }
+
   .select__last .select__title {
     width: 200px;
-    margin: 10px 10px 30px -10px;
+    margin: 8px 10px 30px -10px;
   }
 
   ul {
@@ -264,7 +271,7 @@
     display: block;
     font-family: @font-family-text;
     text-transform: none;
-    margin: 10px 80px 40px;
+    margin: 15px 80px 32px;
   }
 }
 
@@ -295,7 +302,7 @@
     }
 
     .select__programm {
-      margin: 30px 40px 40px 40px;
+      margin: 30px 40px 60px 40px;
     }
 
     .select__first ul {
@@ -313,8 +320,19 @@
       padding-left: 30px;
     }
 
+    .select__other--first .select__title {
+      padding-top: 35px;
+      padding-bottom: 22px;
+      margin-top: -15px;
+    }
+
+    .select__other--first {
+      margin-bottom: 8px;
+    }
+
     .select__other--mod {
-      margin-top: 7px;
+      padding-top: 15px;
+      margin-top: -5px;
     }
 
     .select__title {
@@ -328,13 +346,13 @@
     }
 
     .select__other li {
-      padding: 8px 15px;
+      padding: 10px 15px 10px;
     }
 
     .select__other textarea {
       height: 175px;
-      width: 650px;
-      margin: 35px 35px;
+      width: 630px;
+      margin: 40px;
     }
 
     .user {
@@ -387,7 +405,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      padding: 35px 40px 10px 40px;
+      padding: 40px 40px 10px 40px;
     }
 
     .select__last li {
@@ -420,7 +438,7 @@
       flex-wrap: nowrap;
       flex-direction: row;
       justify-content: flex-start;
-      margin-bottom: 60px;
+      margin-bottom: 55px;
     }
 
     .select__button {
@@ -462,6 +480,7 @@
 
     .select__desktop-block {
       display: flex;
+      margin-bottom: 10px;
     }
 
     .select__first {
@@ -471,7 +490,11 @@
 
     .select__programm {
       width: 50%;
-      margin: 13px 40px 30px 40px;
+      margin: 13px 40px 40px 40px;
+    }
+
+    .select__programm li {
+      padding-top: 15px;
     }
 
     .select__other,
@@ -489,9 +512,17 @@
       padding: 10px 0 20px 35px;
     }
 
+    .select__other--mod {
+      margin: 15px 0 10px 0;
+    }
+
     .select__title--mod {
       margin: 15px 0 20px 0;
-      padding: 0 0 15px 35px;
+      padding: 0 0 10px 35px;
+    }
+
+    .select__other--first label {
+      margin-left: 8px;
     }
 
     .select__last .select__title {
@@ -502,7 +533,7 @@
 
     .select__other textarea {
       width: 1220px;
-      margin: 45px 25px 20px 35px;
+      margin: 45px 25px 20px 40px;
     }
 
     .select__other ul {
@@ -524,7 +555,7 @@
     }
 
     .select__last ul {
-      padding: 5px 10px 10px 35px;
+      padding: 10px 10px 5px 35px;
     }
 
     .select__last li {
@@ -538,12 +569,12 @@
 
     .select__legend {
       width: 570px;
-      margin-top: 20px;
+      margin-top: 30px;
       margin-left: 40px;
     }
 
     .select__button-block {
-      margin-bottom: 70px;
+      margin-bottom: 75px;
     }
   }
 }
